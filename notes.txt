@@ -65,4 +65,4 @@ For binary data like PDFs or images: response.setContentType("application/pdf");
 
 directives:
 scriptlets:
-expression: to get expression definitions: to dynamically work on contents
+expression: to get expression definitions: to dynamically work on contents: im not a dumbass
