@@ -1,0 +1,68 @@
+purpose of OOP: to implement by interpreting real world objects & instances in a realistic manner.
+
+servlet lifecycle methods: 03
+tomcat: virtual server
+servlet: executed(via specific methods: init...) as a lifecycle inside a virtual server's container(tomcat)
+
+init: executed at only first request reached to server(one-time stuff)
+	+we can override to do initialization steps: eg: create tables, DBs, establish connections, opening files
+
+service: heart of the server
+override to implement business logics(solve business problems by implementing the suitable logic)
+unlike init, service executed by each and every request reached to server.
+
+destroy: executed at the end of the servlet
+unloaded from the servlet memory(jvm) in case when you down a server.
+open db cons, clear files, close opened files.
+
+
+
+http servlet class respond to handle http requests where java class is unable to.
+
+when you extend to an HTTP servlet uses the imported javax.servlet.http.*;
+
+attr* of form: action(onsubmit,...) & method(post or get)
+
+file name with spaces: leads to runtime errors
+
+camel method?
+
+methods: verbs for naming, variables: nouns for naming
+
+Java project naming conventions: (specially apache maven projects)
+AbcApp ---> abc-app
+why use hypens instead of underscores? hmm
+
+src- source code related stuff.
+external libs- java- maven junit- this is a framework(used in the industry)- for dev level unit testing: eg: helps to writing unit testing methods
+
+Dependancy- any library or a framework that helps to build the project
+
+you can continuously build the project instead of running.
+
+127.0.0.1- localhost ip
+
+port:8080 is the default port for web servers.
+
+.../my-servlet-app -is the context path
+
+maven- a dependancy management(project management) & building tool.
+
+pom.xml stores the paths for dependancies used for maven library methods.
+
+web.xml - for each request tomcat asks instructions from this
+	this does mappings
+
+in servlet and servletmap, <servlet-name> should match in both
+<servlet-class> should also include it's package
+
+
+For HTML content: response.setContentType("text/html");
+For plain text: response.setContentType("text/plain");
+For JSON: response.setContentType("application/json");
+For XML: response.setContentType("application/xml");
+For binary data like PDFs or images: response.setContentType("application/pdf"); or response.setContentType("image/png");
+
+directives:
+scriptlets:
+expression: to get expression definitions: to dynamically work on contents
